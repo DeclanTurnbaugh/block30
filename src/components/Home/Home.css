@@ -1,0 +1,54 @@
+.home-container {
+  max-width: 100%;
+  margin: 20 auto;
+  padding: 20px;
+}
+
+.books-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.book-item {
+  max-width: 250px;
+  margin: 20px;
+  transition: scale 0.125s;
+}
+
+.book-item:hover {
+  scale: 1.05;
+}
+
+.book-cover {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.book-details {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-top: none;
+  color: #333;
+}
+
+.search-bar-container {
+  margin-bottom: 20px;
+}
+
+.search-bar-container input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.search-bar-container button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none !important;
+}

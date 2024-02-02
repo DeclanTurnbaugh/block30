@@ -1,20 +1,25 @@
-import { useState } from 'react'
-import bookLogo from './assets/books.png'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
-  const [token, setToken] = useState(null)
+import Header from "./components/Header/Header.jsx";
+import Home from "./components/Home/Home.jsx";
+import BookDetails from "./components/BookDetails/BookDetails.jsx";
+import Login from "./components/Login/Login.jsx";
+import Register from "./components/Register/Register.jsx";
+import Account from "./components/Account/Account.jsx";
 
+const App = () => {
   return (
-    <>
-      <h1><img id='logo-image' src={bookLogo}/>Library App</h1>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/books" element={<Home />} />
+        <Route path="/books/:id" element={<BookDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
+    </Router>
+  );
+};
 
-      <p>Complete the React components needed to allow users to browse a library catalog, check out books, review their account, and return books that they've finished reading.</p>
-
-      <p>You may need to use the `token` in this top-level component in other components that need to know if a user has logged in or not.</p>
-
-      <p>Don't forget to set up React Router to navigate between the different views of your single page application!</p>
-    </>
-  )
-}
-
-export default App
+export default App;

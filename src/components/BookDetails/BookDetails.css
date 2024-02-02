@@ -1,0 +1,22 @@
+/* BookDetails.css */
+
+.book-details-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-details-container h2 {
+  margin-bottom: 10px;
+}
+
+.book-details-cover {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.loading-message {
+  font-style: italic;
+  color: #888;
+}
